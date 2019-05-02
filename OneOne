@@ -1,0 +1,40 @@
+% clean up matlab before launching script
+clear all
+close all 
+clc
+
+%Symbolic Variables
+
+syms a b c d e f
+syms m l g I u;
+
+% Numeric Values
+
+m = 0.314;
+l = 0.640;
+g = 9.810;
+I = (m*l^2);
+u = 0.05;
+
+% A Matrix
+
+a = 0;
+b = 1;
+c = (m*l^2)/(I+m*l^2);
+d = -u/(I+m*l^2);
+
+% B Matrix
+
+e = (m*l)/(I+m*l^2);
+f = (-u*m*l)/(I+m*l^2);
+
+% Build Matrices
+
+A = [a b; c d];
+B = [e; f];
+
+disp('A');
+disp(A);
+disp('B');
+disp(B);
+
